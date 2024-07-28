@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo right">Logo</a>
+          <!-- <i class="small material-icons">insert_emoticon</i> -->
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a id="clickMeButton">Alert</a></li>
+            <li><a href="https://materializecss.com">Materialize Doc</a></li>
+          </ul>
+        </div>
+      </nav>
+
+  <div class="container">
+    <div class="calculator card">
+      <div class="card-content">
+        <span class="card-title">Calculator</span>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="num1" type="number" class="validate">
+            <label for="num1">Number 1</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="num2" type="number" class="validate">
+            <label for="num2">Number 2</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <a class="waves-effect waves-light btn" id="calculateButton">Total</a>
+            <a class="waves-effect waves-light btn" id="sum">AJAX</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <h5 id="result">Result: </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
