@@ -38,6 +38,12 @@ app.post('/feedback', async (req, res) => {
 
     try {
         const fb_collection = db.collection('feedback');
+        //check for existing feedback
+        const existingFeedback = await fb_collection.findOne({ email, review });
+        if (existingFeedback) {
+            return res.status(400).json({ message: 'Duplicate feedback not allowed!' });
+        }
+        // insert a new feedback if its not a duplicate
         await fb_collection.insertOne({ name, email, review });
         res.status(200).json({ message: 'Thank you for your feedback!' });
     } catch (error) {
