@@ -31,7 +31,7 @@
         </p>
 
         <div id="formContainer">
-            <form class="col s12" onsubmit="submitted(); return false;">
+            <form id="form" class="col s12" onsubmit="submitted(); return false;">
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="name" type="text" class="validate">
@@ -56,13 +56,15 @@
                 </div>
             </form>
             <h3 class="header">Reviews</h3>
-                <div id="reviewsContainer"></div>
+            <div id="reviewsContainer"></div>
         </div>
 
     </div>
 
     <script type="text/javascript" src="/js/materialize.min.js"></script>
     <script type="text/javascript" src="/js/mongoScript.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/eventScript.js"></script>
 </body>
 
 </html>

@@ -1,23 +1,40 @@
-const express = require("express");
-const path = require("path");
-const bodyParser = require("body-parser");
-const { MongoClient } = require("mongodb");
+import express from "express";
+import path from "path";
+import bodyParser from "body-parser";
+import { MongoClient } from "mongodb";
+import { fileURLToPath } from 'url';
+import { Server } from "socket.io";
+import { createServer } from 'http';
 
 const app = express();
 const port = 3000;
-
 const uri = "mongodb+srv://admin:sQbQ7UpBocNpW85I@cluster0.c1bcmhv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri);
+const server = createServer(app);
+const io = new Server(server);
 
 let db;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// Serve the index.html file on the root route
+// serve the index.html file on the root route
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
+
+// socket io connection
+io.on('connection', (socket) => {
+    console.log('a user connected');
+    socket.on('Feedback message', (reviewWrote) => {
+        console.log('Feedback: ' + reviewWrote);
+      });
+    socket.on('disconnect', () => {
+        console.log('user disconnected');
+    });
 });
 
 // Connect to MongoDB
@@ -63,7 +80,7 @@ app.get('/feedback', async (req, res) => {
 });
 
 // start the server,then connect to the database
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
     connectDB();
 });
