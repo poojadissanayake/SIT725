@@ -1,0 +1,165 @@
+/* profile section */
+.profile-section {
+  padding: 2rem;
+}
+
+.profile-info {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.profile-avatar {
+  position: relative;
+}
+
+.profile-avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* top section - challengestogo, completedchallenges, newchallenges */
+.profile-right, .challengestogo, .completedchallenges, .newchallenges {
+  margin-right: 20px;
+}
+
+.profile-right {
+  padding: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.profile-right > .row {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin: 10px 0 5px;
+}
+
+.display-4 {
+  font-size: 70px !important;
+  font-weight: bold;
+  color: black;
+}
+
+/* ChallengesToGo */
+.challengestogo {
+  background-color: #e8c5e5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 230px;
+}
+
+.challengestogo-label {
+  font-size: 14px;
+  text-align: center; 
+  margin-bottom: 1px;
+}
+
+/* Challenges to go */
+.completedchallenges {
+  background-color: #e8c5e5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 230px;
+}
+
+.completedchallenges-label {
+  font-size: 14px;
+  text-align: center; 
+  margin-bottom: 1px;
+}
+
+/*new challenges*/
+.newchallenges {
+  background-color: #e8c5e5; 
+  color: black; 
+  border: none; 
+  padding: 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 10px; 
+  align-items: center;
+  justify-content: center;
+  height: 230px;
+}
+
+.newchallenges-link {
+  position: relative; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  height: 100%; 
+}
+
+.newchallenges:hover {
+  background-color: #91ddcf;
+}
+
+/* add sign on new challenges*/
+.add-sign {
+  background-color: #e8c5e5;
+  font-size: 60px; 
+  color: black; 
+  cursor: pointer; 
+  margin-top: 8px; 
+  display: block;
+}
+
+.add-sign:hover {
+  background-color: #91ddcf; 
+}
+
+.newchallenges:hover .add-sign {
+  background-color: #91ddcf; 
+}
+
+/* challenge status: ongoing challenges*/
+.challenge-card {
+  background-color: #fdf7c3 !important; 
+  color: black; 
+  border: none; 
+}
+
+.progress-bar {
+  background-color: #91ddcf !important; 
+}
+
+.progress-bar-0 { width: 0%; }
+.progress-bar-16 { width: 16.67%; }
+.progress-bar-33 { width: 33.33%; }
+.progress-bar-50 { width: 50%; }
+.progress-bar-66 { width: 66.67%; }
+.progress-bar-83 { width: 83.33%; }
+.progress-bar-100 { width: 100%; }
+
+.custom-button {
+  background-color: #91ddcf !important;
+  color: black; 
+  border: none; 
+}
+
+.custom-button:hover {
+  background-color: #7ec4b7 !important;
+}
+
+.custom-button-2 {
+  background-color: #e8c5e5 !important;
+  color: black; 
+  border: none; 
+}
+
+.custom-button-2:hover {
+  background-color: #e19edc !important;
+}
+
+/* Trophy */
+.fa-trophy {
+  font-size: 50px; 
+  color: gold;
+}
